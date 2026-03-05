@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ===== POLICE ===== */
+  --font-poppins: "Poppins", sans-serif;
+  --default-font-family: "Poppins", sans-serif;
+
+  /* ===== TAILLES DE TEXTE ===== */
+  --text-h1: 48px;
+  --text-h2: 40px;
+  --text-h3: 32px;
+  --text-h4: 24px;
+  --text-h5: 20px;
+  --text-h6: 18px;
+  --text-body: 16px;
+  --text-small: 14px;
+  --text-xs: 12px;
+
+  /* ===== ARRONDIS ===== */
+  --rounded-h1: 12px;
+  --rounded-h2: 8px;
+  --rounded-h3: 4px;
+
+  /* ===== PRIMAIRE — JAUNE OR #FFD700 ===== */
+  --color-primary-0: #FFD700;
+  --color-primary-1: #FFD700;
+  /* Boutons, liens actifs         */
+  --color-primary-2: #FFD700CC;
+  /* Hover boutons (80% opacité)   */
+  --color-primary-3: #FFD70099;
+  /* Bordures, focus ring (60%)    */
+  --color-primary-4: #FFD70066;
+  /* Fond badges (40%)             */
+  --color-primary-5: #FFD70033;
+  /* Fond hover nav (20%)          */
+  --color-primary-6: #E6C200;
+  /* Foncé — pressed/active        */
+  --color-primary-7: #B89800;
+  /* Très foncé — texte coloré     */
+
+  /* ===== SECONDAIRE — BLEU COBALT #0047AB ===== */
+  --color-secondary-0: #0047AB;
+  --color-secondary-1: #0047AB;
+  /* Accents, tags, graphiques     */
+  --color-secondary-2: #0047ABCC;
+  /* Hover (80% opacité)           */
+  --color-secondary-3: #0047AB99;
+  /* Bordures, focus ring (60%)    */
+  --color-secondary-4: #0047AB66;
+  /* Fond badges (40%)             */
+  --color-secondary-5: #0047AB33;
+  /* Fond hover (20%)              */
+  --color-secondary-6: #003A8C;
+  /* Foncé — pressed/active        */
+  --color-secondary-7: #002D6E;
+  /* Très foncé — texte coloré     */
+
+  /* ===== ACCENT — VERT #008000 ===== */
+  --color-accent-0: #008000;
+  --color-accent-1: #008000;
+  /* Livraison, éléments clés      */
+  --color-accent-2: #008000CC;
+  --color-accent-3: #00800099;
+  --color-accent-4: #00800066;
+  --color-accent-5: #00800033;
+  --color-accent-6: #006600;
+  --color-accent-7: #004D00;
+
+  /* ===== NEUTRES — GRIS #A9A9A9 ===== */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-1: #FFFFFF;
+  /* Fond inputs                   */
+  --color-neutral-2: #F8FAFC;
+  /* Fond app principal            */
+  --color-neutral-3: #F1F5F9;
+  /* Fond sidebar / panels         */
+  --color-neutral-4: #A9A9A933;
+  /* Dividers légers (20%)         */
+  --color-neutral-5: #A9A9A966;
+  /* Bordures inputs (40%)         */
+  --color-neutral-6: #A9A9A999;
+  /* Placeholder, icônes (60%)     */
+  --color-neutral-7: #A9A9A9CC;
+  /* Texte secondaire (80%)        */
+  --color-neutral-8: #1A1A2E;
+  /* Texte corps, titres           */
+  --color-neutral-9: #0D0D1A;
+  /* Titres importants             */
+
+  /* ===== SÉMANTIQUES ===== */
+  --color-success-1: #008000;
+  /* Succès = vert de la charte    */
+  --color-success-2: #00800033;
+
+  --color-warning-1: #FFD700;
+  /* Warning = jaune de la charte  */
+  --color-warning-2: #FFD70033;
+
+  --color-danger-1: #EF4444;
+  --color-danger-2: #EF444433;
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  --color-neutral-0: #0D0D1A;
+  --color-neutral-1: #0D0D1A;
+  --color-neutral-2: #1A1A2E;
+  --color-neutral-3: #16213E;
+  --color-neutral-4: #FFFFFF1A;
+  --color-neutral-5: #FFFFFF33;
+  --color-neutral-6: #FFFFFF66;
+  --color-neutral-7: #FFFFFFCC;
+  --color-neutral-8: #F1F5F9;
+  --color-neutral-9: #FFFFFF;
+
+  --color-primary-5: #FFD7001A;
+  --color-secondary-5: #0047AB1A;
+  --color-accent-5: #0080001A;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-6);
+}
+
+* {
+  scrollbar-color: var(--color-primary-1) var(--color-neutral-3);
+}

@@ -1,4 +1,5 @@
 import { CartProvider } from "../../context/CartContext.jsx";
+import { AuthProvider } from "../../context/AuthContext.jsx";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import CartDrawer from "./CartDrawer.jsx";
@@ -37,14 +38,16 @@ export default function AppLayout({
     children,
 }) {
     return (
-        <CartProvider>
-            <div className="w-full overflow-x-hidden min-h-screen bg-neutral-2">
-                <Navbar activePage={activePage} dark={darkNav} />
-                <main>{children}</main>
-                {showFooter && <Footer />}
-                <CartDrawer />
-                <Toast />
-            </div>
-        </CartProvider>
+        <AuthProvider>
+            <CartProvider>
+                <div className="w-full overflow-x-hidden min-h-screen bg-neutral-2">
+                    <Navbar activePage={activePage} dark={darkNav} />
+                    <main>{children}</main>
+                    {showFooter && <Footer />}
+                    <CartDrawer />
+                    <Toast />
+                </div>
+            </CartProvider>
+        </AuthProvider>
     );
 }

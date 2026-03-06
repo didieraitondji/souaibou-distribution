@@ -5,8 +5,10 @@ import LandingPage from "./pages/home/LandingPage.jsx";
 import BoissonsPage from "./pages/boissons/BoissonsPage.jsx";
 import LocationPage from "./pages/location/LocationPage.jsx";
 import ServicesPage from "./pages/services/ServicesPage.jsx";
-import PanierPage   from "./pages/panier/PanierPage.jsx";
-// import SuiviPage    from "./components/pages/suivi/SuiviPage.jsx";
+import PanierPage from "./pages/panier/PanierPage.jsx";
+import SuiviPage from "./pages/suivi/SuiviPage.jsx";
+import AuthPage from "./pages/auth/AuthPage.jsx";
+import ComptePage from "./pages/compte/ComptePage.jsx";
 
 export default function App() {
   return (
@@ -48,13 +50,22 @@ export default function App() {
           </AppLayout>
         } />
 
-        {/*
+        {/* Suivi */}
         <Route path="/suivi" element={
           <AppLayout activePage="/suivi" darkNav>
             <SuiviPage />
           </AppLayout>
         } />
-        */}
+
+        {/* Auth — sans Navbar ni Footer */}
+        <Route path="/connexion" element={<AuthPage />} />
+        <Route path="/inscription" element={<AuthPage />} />
+
+        
+        <Route path="/compte" element={
+          <AppLayout activePage="" darkNav><ComptePage /></AppLayout>
+        } />
+        
 
       </Routes>
     </BrowserRouter>

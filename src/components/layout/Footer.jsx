@@ -26,7 +26,13 @@ export default function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
                     <div className="sm:col-span-2 lg:col-span-1">
                         <div className="flex items-center gap-3 mb-5">
-                            <div className="w-11 h-11 rounded-full flex items-center justify-center font-black text-body text-neutral-0 shrink-0" style={{ background: "linear-gradient(135deg,#FFD700,#0047AB)", boxShadow: "0 0 16px rgba(255,215,0,0.3)" }}>SD</div>
+                            {/*<div className="w-11 h-11 rounded-full flex items-center justify-center font-black text-body text-neutral-0 shrink-0" style={{ background: "linear-gradient(135deg,#FFD700,#0047AB)", boxShadow: "0 0 16px rgba(255,215,0,0.3)" }}>SD</div>*/}
+                            <img
+                                src="/logo.png"
+                                alt="Souaïbou Distribution"
+                                className="w-10 h-10 rounded-full object-cover shrink-0"
+                                style={{ boxShadow: "0 0 16px rgba(255,215,0,0.4)" }}
+                            />
                             <div>
                                 <div className="font-extrabold text-[15px] text-primary-1">Souaïbou Distribution</div>
                                 <div className="font-light text-[10px] text-neutral-6 tracking-widest uppercase">Livraison express · Qualité abordable</div>

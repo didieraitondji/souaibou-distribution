@@ -5,7 +5,7 @@ import LandingPage from "./pages/home/LandingPage.jsx";
 import BoissonsPage from "./pages/boissons/BoissonsPage.jsx";
 import LocationPage from "./pages/location/LocationPage.jsx";
 import ServicesPage from "./pages/services/ServicesPage.jsx";
-// import PanierPage   from "./components/pages/panier/PanierPage.jsx";
+import PanierPage   from "./pages/panier/PanierPage.jsx";
 // import SuiviPage    from "./components/pages/suivi/SuiviPage.jsx";
 
 export default function App() {
@@ -34,18 +34,21 @@ export default function App() {
           </AppLayout>
         } />
 
+        {/* Services */}
         <Route path="/services" element={
           <AppLayout activePage="/services" darkNav>
             <ServicesPage />
           </AppLayout>
         } />
 
-        {/*<Route path="/panier" element={
+        {/* Panier */}
+        <Route path="/panier" element={
           <AppLayout activePage="" darkNav showFooter={false}>
             <PanierPage />
           </AppLayout>
         } />
 
+        {/*
         <Route path="/suivi" element={
           <AppLayout activePage="/suivi" darkNav>
             <SuiviPage />

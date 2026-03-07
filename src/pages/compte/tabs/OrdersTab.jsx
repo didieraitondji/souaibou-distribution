@@ -5,16 +5,16 @@ export default function OrdersTab() {
         <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                    <span className="text-[18px]">📦</span>
-                    <h3 className="font-bold text-[16px] text-neutral-9">Mes commandes</h3>
+                    <span className="text-h6">📦</span>
+                    <h3 className="font-bold text-body text-neutral-9">Mes commandes</h3>
                 </div>
                 <span className="text-[13px] text-neutral-6">{DEMO_ORDERS.length} commandes</span>
             </div>
 
             {DEMO_ORDERS.length === 0 ? (
                 <div className="bg-neutral-0 rounded-2xl border border-neutral-4 p-12 text-center">
-                    <span className="text-[48px] block mb-4">📭</span>
-                    <p className="font-bold text-[16px] text-neutral-9 mb-2">Aucune commande pour l'instant</p>
+                    <span className="text-h1 block mb-4">📭</span>
+                    <p className="font-bold text-body text-neutral-9 mb-2">Aucune commande pour l'instant</p>
                     <p className="text-[14px] text-neutral-6 mb-6">Parcourez notre catalogue et passez votre première commande.</p>
                     <a href="/boissons"
                         className="font-bold text-[14px] text-neutral-9 no-underline px-6 py-3 rounded-xl inline-block transition-all hover:-translate-y-0.5"
@@ -48,7 +48,7 @@ export default function OrdersTab() {
                                             Livraison prévue le {order.date} à {order.heure}
                                         </p>
                                     </div>
-                                    <span className="font-extrabold text-[18px] text-primary-1">
+                                    <span className="font-extrabold text-h6 text-primary-1">
                                         {(total + livraison).toLocaleString()} <span className="text-[12px] font-medium text-neutral-6">FCFA</span>
                                     </span>
                                 </div>
@@ -58,7 +58,7 @@ export default function OrdersTab() {
                                     {order.items.slice(0, 3).map((item, i) => (
                                         <div key={i} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-3 text-[12px] font-medium text-neutral-8">
                                             <span>{item.emoji}</span>
-                                            <span className="truncate max-w-[120px]">{item.name}</span>
+                                            <span className="truncate max-w-30">{item.name}</span>
                                             <span className="text-neutral-6">×{item.qty}</span>
                                         </div>
                                     ))}

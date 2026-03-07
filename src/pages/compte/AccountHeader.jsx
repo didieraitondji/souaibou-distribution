@@ -44,7 +44,7 @@ export default function AccountHeader() {
                             ✓ Vérifié
                         </span>
                     </div>
-                    <p className="text-[14px] text-neutral-6">{user?.telephone ?? ""}</p>
+                    <p className="text-sm text-neutral-6">{user?.telephone ?? ""}</p>
                     {user?.ville && <p className="text-[13px] text-neutral-6 mt-0.5">📍 {user.ville}</p>}
                 </div>
 
@@ -55,7 +55,7 @@ export default function AccountHeader() {
                         { value: memberSince, label: "Membre depuis" },
                     ].map(({ value, label }) => (
                         <div key={label} className="text-center">
-                            <div className="font-extrabold text-[18px] text-primary-1 leading-none">{value}</div>
+                            <div className="font-extrabold text-h6 text-primary-1 leading-none">{value}</div>
                             <div className="text-[11px] text-neutral-6 mt-1 whitespace-nowrap">{label}</div>
                         </div>
                     ))}

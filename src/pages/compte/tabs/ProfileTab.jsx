@@ -95,7 +95,7 @@ function Field({ label, value, onChange, icon, placeholder, type = "text" }) {
         <div>
             <label className="text-[13px] font-semibold text-neutral-8 block mb-1.5">{label}</label>
             <div className="relative">
-                {icon && <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[16px] pointer-events-none">{icon}</span>}
+                {icon && <span className="absolute left-4 top-1/2 -translate-y-1/2 text-body pointer-events-none">{icon}</span>}
                 <input type={type} value={value} placeholder={placeholder}
                     onChange={(e) => onChange(e.target.value)}
                     className="w-full py-3.5 rounded-xl text-[14px] text-neutral-9 border border-neutral-4 outline-none transition-all focus:border-primary-1"
@@ -109,8 +109,8 @@ function Field({ label, value, onChange, icon, placeholder, type = "text" }) {
 function SectionTitle({ icon, title }) {
     return (
         <div className="flex items-center gap-2.5">
-            <span className="text-[18px]">{icon}</span>
-            <h3 className="font-bold text-[16px] text-neutral-9">{title}</h3>
+            <span className="text-h6">{icon}</span>
+            <h3 className="font-bold text-body text-neutral-9">{title}</h3>
         </div>
     );
 }

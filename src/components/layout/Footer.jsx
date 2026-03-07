@@ -3,12 +3,11 @@ const LINKS = {
         { label: "Boissons", href: "/boissons" },
         { label: "Location matériel", href: "/location" },
         { label: "Services événementiels", href: "/services" },
-        { label: "Pack complet", href: "/catalogue" },
     ],
     "Compte": [
         { label: "Se connecter", href: "/connexion" },
         { label: "Créer un compte", href: "/inscription" },
-        { label: "Mes commandes", href: "/compte/commandes" },
+        { label: "Mes commandes", href: "/compte" },
         { label: "Suivi de commande", href: "/suivi" },
     ],
     "Informations": [

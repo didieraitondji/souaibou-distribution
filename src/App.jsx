@@ -9,6 +9,7 @@ import PanierPage from "./pages/panier/PanierPage.jsx";
 import SuiviPage from "./pages/suivi/SuiviPage.jsx";
 import AuthPage from "./pages/auth/AuthPage.jsx";
 import ComptePage from "./pages/compte/ComptePage.jsx";
+import AboutPage from "./pages/about/AoutPage.jsx";
 
 export default function App() {
   return (
@@ -61,12 +62,14 @@ export default function App() {
         <Route path="/connexion" element={<AuthPage />} />
         <Route path="/inscription" element={<AuthPage />} />
 
-        
+
         <Route path="/compte" element={
           <AppLayout activePage="" darkNav><ComptePage /></AppLayout>
         } />
-        
 
+        <Route path="/about" element={
+          <AppLayout activePage="" darkNav><AboutPage /></AppLayout>
+        } />
       </Routes>
     </BrowserRouter>
   );

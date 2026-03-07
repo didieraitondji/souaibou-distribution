@@ -72,7 +72,7 @@ export default function RegisterForm({ onSuccess, onSwitchToLogin }) {
                     🎉
                 </div>
                 <div>
-                    <h2 className="font-extrabold text-[24px] text-neutral-9">Bienvenue {form.nom.split(" ")[0]} !</h2>
+                    <h2 className="font-extrabold text-h4 text-neutral-9">Bienvenue {form.nom.split(" ")[0]} !</h2>
                     <p className="text-[14px] text-neutral-6 mt-2 leading-relaxed max-w-[320px] mx-auto">
                         Votre compte a été créé avec succès. Vous êtes maintenant connecté.
                     </p>
@@ -209,7 +209,7 @@ function Field({ label, placeholder, value, onChange, error, type = "text", icon
         <div>
             <label className="text-[13px] font-semibold text-neutral-8 block mb-1.5">{label}</label>
             <div className="relative">
-                {icon && <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[16px] pointer-events-none">{icon}</span>}
+                {icon && <span className="absolute left-4 top-1/2 -translate-y-1/2 text-body pointer-events-none">{icon}</span>}
                 <input type={type} value={value} placeholder={placeholder}
                     onChange={(e) => onChange(e.target.value)}
                     className="w-full py-3.5 rounded-xl text-[14px] text-neutral-9 border outline-none transition-all"
@@ -228,7 +228,7 @@ function PasswordField({ label, placeholder, value, onChange, error, show, onTog
         <div>
             <label className="text-[13px] font-semibold text-neutral-8 block mb-1.5">{label}</label>
             <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[16px] pointer-events-none">🔒</span>
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-body pointer-events-none">🔒</span>
                 <input type={show ? "text" : "password"} value={value} placeholder={placeholder}
                     onChange={(e) => onChange(e.target.value)}
                     className="w-full pl-11 pr-11 py-3.5 rounded-xl text-[14px] text-neutral-9 border outline-none transition-all"
@@ -237,7 +237,7 @@ function PasswordField({ label, placeholder, value, onChange, error, show, onTog
                     onBlur={(e) => { if (!error) e.target.style.borderColor = "#f1f5f9"; }}
                 />
                 <button type="button" onClick={onToggle}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-0 cursor-pointer text-[16px] text-neutral-6 hover:text-neutral-9 transition-colors">
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-0 cursor-pointer text-body text-neutral-6 hover:text-neutral-9 transition-colors">
                     {show ? "🙈" : "👁️"}
                 </button>
             </div>

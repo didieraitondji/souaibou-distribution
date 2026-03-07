@@ -11,7 +11,7 @@ export default function CartSummary({ onContinue }) {
             <div className="flex flex-col items-center justify-center py-32 gap-5 text-center px-4">
                 <span className="text-[72px]">🛒</span>
                 <h2 className="font-bold text-h4 text-neutral-9">Votre panier est vide</h2>
-                <p className="text-[15px] text-neutral-6 max-w-90 leading-relaxed">
+                <p className="text-sm text-neutral-6 max-w-90 leading-relaxed">
                     Ajoutez des boissons, du matériel ou des services pour commencer votre commande.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 mt-2">

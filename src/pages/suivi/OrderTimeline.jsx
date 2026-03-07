@@ -52,7 +52,7 @@ export default function OrderTimeline({ order }) {
                             <div key={step.id} className="relative flex gap-5 pb-8 last:pb-0" style={{ zIndex: 2 }}>
                                 {/* Icône */}
                                 <div
-                                    className="w-12 h-12 rounded-full flex items-center justify-center text-[20px] shrink-0 transition-all duration-500 border-2"
+                                    className="w-12 h-12 rounded-full flex items-center justify-center text-h5 shrink-0 transition-all duration-500 border-2"
                                     style={{
                                         background: isDone ? "#008000" : isActive ? "rgba(255,215,0,0.15)" : "rgba(255,255,255,0.8)",
                                         borderColor: isDone ? "#008000" : isActive ? "#FFD700" : "#E2E8F0",

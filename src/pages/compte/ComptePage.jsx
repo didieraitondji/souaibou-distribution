@@ -7,7 +7,7 @@ import OrdersTab from "./tabs/OrdersTab.jsx";
 import AddressesTab from "./tabs/AddressesTab.jsx";
 import SecurityTab from "./tabs/SecurityTab.jsx";
 
-// ⚠️ Ne pas ajouter Navbar/Footer ici — AppLayout s'en charge.
+// Ne pas ajouter Navbar/Footer ici — AppLayout s'en charge.
 export default function ComptePage() {
     const { isAuthenticated } = useAuth();
     const [activeTab, setActiveTab] = useState("profile");
@@ -29,7 +29,7 @@ export default function ComptePage() {
         <div className="min-h-screen bg-neutral-3">
             {/* Page header */}
             <div className="bg-neutral-0 border-b border-neutral-4 pt-20">
-                <div className="max-w-[1100px] mx-auto px-4 md:px-8 pt-6 pb-0">
+                <div className="max-w-275 mx-auto px-4 md:px-8 pt-6 pb-0">
                     <div className="flex items-center gap-2 text-[13px] text-neutral-6 mb-5">
                         <a href="/" className="no-underline text-neutral-6 hover:text-primary-1 transition-colors">Accueil</a>
                         <span>/</span>
@@ -38,7 +38,7 @@ export default function ComptePage() {
                 </div>
             </div>
 
-            <div className="max-w-[1100px] mx-auto px-4 md:px-8 py-8">
+            <div className="max-w-275 mx-auto px-4 md:px-8 py-8">
                 {/* Header profil */}
                 <div className="mb-8">
                     <AccountHeader />

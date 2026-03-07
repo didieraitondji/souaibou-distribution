@@ -26,8 +26,8 @@ export default function AddressesTab() {
         <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                    <span className="text-[18px]">📍</span>
-                    <h3 className="font-bold text-[16px] text-neutral-9">Mes adresses</h3>
+                    <span className="text-h6">📍</span>
+                    <h3 className="font-bold text-body text-neutral-9">Mes adresses</h3>
                 </div>
                 <button
                     onClick={() => setShowForm((v) => !v)}
@@ -86,7 +86,7 @@ export default function AddressesTab() {
                         style={{ borderColor: addr.default ? "rgba(255,215,0,0.4)" : "#f1f5f9", background: addr.default ? "rgba(255,215,0,0.03)" : "#fff" }}>
                         <div className="flex items-start justify-between gap-3">
                             <div className="flex items-start gap-3">
-                                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-[18px] shrink-0"
+                                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-h6 shrink-0"
                                     style={{ background: addr.default ? "rgba(255,215,0,0.15)" : "#F8FAFC" }}>
                                     🏠
                                 </div>
@@ -113,7 +113,7 @@ export default function AddressesTab() {
                                     </button>
                                 )}
                                 <button onClick={() => remove(addr.id)}
-                                    className="w-8 h-8 rounded-lg flex items-center justify-center text-neutral-5 hover:text-danger-1 hover:bg-danger-2 bg-transparent border-0 cursor-pointer transition-all text-[16px]">
+                                    className="w-8 h-8 rounded-lg flex items-center justify-center text-neutral-5 hover:text-danger-1 hover:bg-danger-2 bg-transparent border-0 cursor-pointer transition-all text-body">
                                     🗑
                                 </button>
                             </div>

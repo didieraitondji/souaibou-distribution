@@ -46,8 +46,8 @@ export default function SecurityTab() {
 
             {/* Changer le mot de passe */}
             <div className="flex items-center gap-2.5">
-                <span className="text-[18px]">🔒</span>
-                <h3 className="font-bold text-[16px] text-neutral-9">Changer le mot de passe</h3>
+                <span className="text-h6">🔒</span>
+                <h3 className="font-bold text-body text-neutral-9">Changer le mot de passe</h3>
             </div>
 
             <div className="bg-neutral-0 rounded-2xl border border-neutral-4 p-6 flex flex-col gap-4">
@@ -89,13 +89,13 @@ export default function SecurityTab() {
 
             {/* Sessions actives */}
             <div className="flex items-center gap-2.5">
-                <span className="text-[18px]">📱</span>
-                <h3 className="font-bold text-[16px] text-neutral-9">Session active</h3>
+                <span className="text-body">📱</span>
+                <h3 className="font-bold text-body text-neutral-9">Session active</h3>
             </div>
             <div className="bg-neutral-0 rounded-2xl border border-neutral-4 p-5">
                 <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-neutral-3 flex items-center justify-center text-[20px]">💻</div>
+                        <div className="w-10 h-10 rounded-xl bg-neutral-3 flex items-center justify-center text-h5">💻</div>
                         <div>
                             <p className="font-semibold text-[14px] text-neutral-9">Navigateur web</p>
                             <p className="text-[12px] text-neutral-6">Cotonou, Bénin · Session actuelle</p>
@@ -110,8 +110,8 @@ export default function SecurityTab() {
 
             {/* Zone danger */}
             <div className="flex items-center gap-2.5">
-                <span className="text-[18px]">⚠️</span>
-                <h3 className="font-bold text-[16px] text-neutral-9">Zone dangereuse</h3>
+                <span className="text-h6">⚠️</span>
+                <h3 className="font-bold text-body text-neutral-9">Zone dangereuse</h3>
             </div>
             <div className="rounded-2xl border p-5 flex flex-col gap-3"
                 style={{ borderColor: "rgba(239,68,68,0.25)", background: "rgba(239,68,68,0.03)" }}>
@@ -157,7 +157,7 @@ function PwdField({ label, value, onChange, error, show, onToggle }) {
         <div>
             <label className="text-[13px] font-semibold text-neutral-8 block mb-1.5">{label}</label>
             <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[16px] pointer-events-none">🔒</span>
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-body pointer-events-none">🔒</span>
                 <input type={show ? "text" : "password"} value={value}
                     onChange={(e) => onChange(e.target.value)}
                     className="w-full pl-11 pr-11 py-3.5 rounded-xl text-[14px] text-neutral-9 border outline-none transition-all"
@@ -166,7 +166,7 @@ function PwdField({ label, value, onChange, error, show, onToggle }) {
                     onBlur={(e) => { if (!error) e.target.style.borderColor = "#f1f5f9"; }}
                 />
                 <button type="button" onClick={onToggle}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-0 cursor-pointer text-[16px] text-neutral-6 hover:text-neutral-9 transition-colors">
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent border-0 cursor-pointer text-body text-neutral-6 hover:text-neutral-9 transition-colors">
                     {show ? "🙈" : "👁️"}
                 </button>
             </div>

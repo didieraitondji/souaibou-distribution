@@ -33,7 +33,7 @@ export default function AuthPage() {
 
                 {/* ── Panneau gauche — visuel décoratif (desktop) ── */}
                 <div
-                    className="hidden lg:flex flex-col justify-between w-[480px] shrink-0 p-10 relative overflow-hidden"
+                    className="hidden lg:flex flex-col justify-between w-120 shrink-0 p-10 relative overflow-hidden"
                     style={{ background: "linear-gradient(160deg,#0D0D1A 0%,#1A2E0D 50%,#0D0D1A 100%)" }}
                 >
                     {/* Orbs déco */}
@@ -77,7 +77,7 @@ export default function AuthPage() {
                                         transition: `all 0.4s ease ${i * 100 + 200}ms`,
                                     }}
                                 >
-                                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-[20px] shrink-0"
+                                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-h5 shrink-0"
                                         style={{ background: "rgba(255,215,0,0.1)", border: "1px solid rgba(255,215,0,0.2)" }}>
                                         {perk.icon}
                                     </div>
@@ -105,7 +105,7 @@ export default function AuthPage() {
                 {/* ── Panneau droit — formulaire ── */}
                 <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 bg-neutral-3 min-h-screen">
                     {/* Header mobile */}
-                    <div className="lg:hidden flex items-center gap-3 mb-8 self-start w-full max-w-[480px]">
+                    <div className="lg:hidden flex items-center gap-3 mb-8 self-start w-full max-w-120">
                         <a href="/" className="no-underline flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full flex items-center justify-center font-black text-[13px] text-neutral-0"
                                 style={{ background: "linear-gradient(135deg,#FFD700,#0047AB)" }}>
@@ -116,7 +116,7 @@ export default function AuthPage() {
                     </div>
 
                     {/* Toggle connexion / inscription */}
-                    <div className="w-full max-w-[480px] mb-6">
+                    <div className="w-full max-w-120 mb-6">
                         <div className="flex bg-neutral-0 rounded-2xl p-1.5 border border-neutral-4">
                             {[
                                 { id: "login", label: "Connexion" },
@@ -140,7 +140,7 @@ export default function AuthPage() {
 
                     {/* Card formulaire */}
                     <div
-                        className="w-full max-w-[480px] bg-neutral-0 rounded-2xl border border-neutral-4 p-6 md:p-8"
+                        className="w-full max-w-120 bg-neutral-0 rounded-2xl border border-neutral-4 p-6 md:p-8"
                         style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.06)" }}
                     >
                         {mode === "login"

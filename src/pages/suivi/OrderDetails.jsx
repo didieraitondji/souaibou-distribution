@@ -30,10 +30,10 @@ export default function OrderDetails({ order }) {
                         { icon: "💳", label: "Paiement", value: PAYMENT_LABELS[order.paymentMethod] ?? order.paymentMethod },
                     ].map(({ icon, label, value, bold }) => (
                         <div key={label} className="flex items-start gap-3">
-                            <span className="text-[16px] mt-0.5 shrink-0">{icon}</span>
+                            <span className="text-body mt-0.5 shrink-0">{icon}</span>
                             <div>
-                                <p className="text-[11px] font-semibold text-neutral-6 uppercase tracking-wide">{label}</p>
-                                <p className={`text-[14px] mt-0.5 ${bold ? "font-extrabold text-primary-1" : "font-semibold text-neutral-9"}`}>
+                                <p className="text-sm font-semibold text-neutral-6 uppercase tracking-wide">{label}</p>
+                                <p className={`text-sm mt-0.5 ${bold ? "font-extrabold text-primary-1" : "font-semibold text-neutral-9"}`}>
                                     {value}
                                 </p>
                             </div>
@@ -51,14 +51,14 @@ export default function OrderDetails({ order }) {
                 <div className="flex flex-col gap-3">
                     {order.items.map((item, i) => (
                         <div key={i} className="flex items-center gap-3 py-2 border-b border-neutral-3 last:border-0">
-                            <div className="w-10 h-10 bg-neutral-3 rounded-xl flex items-center justify-center text-[20px] shrink-0">
+                            <div className="w-10 h-10 bg-neutral-3 rounded-xl flex items-center justify-center text-h5 shrink-0">
                                 {item.emoji}
                             </div>
                             <div className="flex-1 min-w-0">
-                                <p className="font-semibold text-[14px] text-neutral-9 truncate">{item.name}</p>
+                                <p className="font-semibold text-sm text-neutral-9 truncate">{item.name}</p>
                                 <p className="text-[11px] text-neutral-6">× {item.qty}</p>
                             </div>
-                            <span className="font-bold text-[14px] text-neutral-9 shrink-0">
+                            <span className="font-bold text-sm text-neutral-9 shrink-0">
                                 {(item.price * item.qty).toLocaleString()} FCFA
                             </span>
                         </div>
@@ -79,7 +79,7 @@ export default function OrderDetails({ order }) {
                     </div>
                     <div className="flex justify-between items-center pt-2 border-t border-neutral-4 mt-1">
                         <span className="font-bold text-[15px] text-neutral-9">Total</span>
-                        <span className="font-extrabold text-[20px] text-primary-1">
+                        <span className="font-extrabold text-h5 text-primary-1">
                             {totalFinal.toLocaleString()}
                             <span className="text-[12px] font-medium text-neutral-6 ml-1">FCFA</span>
                         </span>

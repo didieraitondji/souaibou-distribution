@@ -21,7 +21,7 @@ export default function SuiviHero({ onSearch, loading, error }) {
             <div className="absolute inset-0 pointer-events-none opacity-20"
                 style={{ backgroundImage: "linear-gradient(rgba(255,215,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,215,0,0.04) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
 
-            <div className="max-w-75 mx-auto relative z-10 text-center">
+            <div className="max-w-275 mx-auto relative z-10 text-center">
                 {/* Breadcrumb */}
                 <div className="flex items-center justify-center gap-2 text-[13px] text-neutral-6 mb-8">
                     <a href="/" className="no-underline text-neutral-6 hover:text-primary-1 transition-colors">Accueil</a>

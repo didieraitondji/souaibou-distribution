@@ -10,6 +10,9 @@ import SuiviPage from "./pages/suivi/SuiviPage.jsx";
 import AuthPage from "./pages/auth/AuthPage.jsx";
 import ComptePage from "./pages/compte/ComptePage.jsx";
 import AboutPage from "./pages/about/AoutPage.jsx";
+import ContactPage from "./pages/contact/ContactPage.jsx";
+import CguPage from "./pages/legal/CguPage.jsx";
+import ConfidentialitePage from "./pages/legal/ConfidentialitePage.jsx";
 
 export default function App() {
   return (
@@ -46,7 +49,7 @@ export default function App() {
 
         {/* Panier */}
         <Route path="/panier" element={
-          <AppLayout activePage="" darkNav showFooter={false}>
+          <AppLayout activePage="/panier" darkNav showFooter={false}>
             <PanierPage />
           </AppLayout>
         } />
@@ -64,11 +67,23 @@ export default function App() {
 
 
         <Route path="/compte" element={
-          <AppLayout activePage="" darkNav><ComptePage /></AppLayout>
+          <AppLayout activePage="/compte" darkNav><ComptePage /></AppLayout>
         } />
 
         <Route path="/about" element={
-          <AppLayout activePage="" darkNav><AboutPage /></AppLayout>
+          <AppLayout activePage="/about" darkNav><AboutPage /></AppLayout>
+        } />
+
+        <Route path="/contact" element={
+          <AppLayout activePage="/contact" darkNav><ContactPage /></AppLayout>
+        } />
+
+        <Route path="/cgu" element={
+          <AppLayout activePage="/cgu" darkNav><CguPage /></AppLayout>
+        } />
+
+        <Route path="/confidentialite" element={
+          <AppLayout activePage="/confidentialite" darkNav><ConfidentialitePage /></AppLayout>
         } />
       </Routes>
     </BrowserRouter>

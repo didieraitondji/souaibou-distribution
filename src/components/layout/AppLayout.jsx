@@ -43,7 +43,7 @@ export default function AppLayout({
                 <div className="w-full overflow-x-hidden min-h-screen bg-neutral-2">
                     <Navbar activePage={activePage} dark={darkNav} />
                     <main>{children}</main>
-                    {showFooter && <Footer />}
+                    {showFooter && <Footer activePage={activePage} />}
                     <CartDrawer />
                     <Toast />
                 </div>

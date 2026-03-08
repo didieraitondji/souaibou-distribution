@@ -108,7 +108,7 @@ export default function ServicesSection() {
                         <h3 className="font-bold text-h5 md:text-[22px] text-neutral-0 mb-3">Besoin de combiner plusieurs services ?</h3>
                         <p className="text-[15px] text-neutral-6 mb-6">Créez un panier mixte : boissons + location + services en une seule commande.</p>
                         <a
-                            href="/catalogue"
+                            href="/boissons"
                             className="font-bold text-[15px] text-neutral-9 no-underline px-9 py-3.5 rounded-xl inline-block transition-all duration-200 hover:-translate-y-0.5"
                             style={{ background: "linear-gradient(135deg,#FFD700,#E6C200)", boxShadow: "0 4px 20px rgba(255,215,0,0.3)" }}
                         >

@@ -18,7 +18,7 @@ const LINKS = {
     ],
 };
 
-export default function Footer() {
+export default function Footer({ activePage = "" }) {
     return (
         <footer className="py-16 px-4 md:px-8 border-t" style={{ background: "#0D0D1A", borderColor: "rgba(255,215,0,0.12)" }}>
             <div className="max-w-275 mx-auto">
@@ -51,9 +51,15 @@ export default function Footer() {
                         <div key={title}>
                             <h4 className="font-bold text-sm text-neutral-0 mb-5 pb-2.5 border-b border-neutral-4">{title}</h4>
                             <div className="flex flex-col gap-2.5">
-                                {links.map((link) => (
-                                    <a key={link.href} href={link.href} className="text-[13px] text-neutral-6 no-underline transition-colors duration-200 hover:text-primary-1">{link.label}</a>
-                                ))}
+                                {links.map((link) => {
+                                    const isActive = activePage === link.href;
+                                    return (
+                                        <a
+                                            key={link.href} href={link.href}
+                                            className={`text-[13px] text-neutral-6 no-underline transition-colors duration-200 hover:text-primary-1 ${isActive && "text-primary-1"}`}
+                                        >{link.label}</a>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}

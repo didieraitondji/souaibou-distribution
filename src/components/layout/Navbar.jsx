@@ -77,7 +77,6 @@ export default function Navbar({ activePage = "", dark = false }) {
                                     style={{
                                         background: isActive ? "rgba(255,215,0,0.12)" : "transparent",
                                         color: isActive ? "#FFD700" : "#fff",
-                                        borderBottom: isActive ? "2px solid #FFD700" : "2px solid transparent",
                                     }}
                                     onMouseEnter={(e) => {
                                         if (!isActive) {
